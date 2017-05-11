@@ -5,7 +5,7 @@ package com.julioagustin.ipoo.repuestos.datos.cliente;
 public class Cliente {
 	
 	//atributos
-	private int id;
+	private long id;
 	private String nroDoc;
 	private String tipoDoc;
 	private String nombre;
@@ -31,10 +31,10 @@ public class Cliente {
 	}
 	
 	//métodos
-	public int getId() {
+	public long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	public String getNroDoc() {
@@ -73,9 +73,5 @@ public class Cliente {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
-	
-	
 }
 // fin de la clase
