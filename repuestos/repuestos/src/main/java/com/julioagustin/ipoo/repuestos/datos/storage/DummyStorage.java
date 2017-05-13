@@ -50,5 +50,7 @@ public class DummyStorage implements Storage{
 		
 			Storage s=new DummyStorage();
 			Cliente c=s.obtCliente("CI","4900905","123");
+			System.out.println("Cliente es null: " + c);
+			System.out.println("Nombre Cliente: " + c.getNombre());
 	}
 }
