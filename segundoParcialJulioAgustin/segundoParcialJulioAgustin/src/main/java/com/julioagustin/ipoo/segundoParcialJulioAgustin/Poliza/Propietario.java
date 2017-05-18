@@ -1,5 +1,12 @@
 package com.julioagustin.ipoo.segundoParcialJulioAgustin.Poliza;
 
-public class Propietario {
+import com.julioagustin.ipoo.segundoParcialJulioAgustin.Persona.Persona;
 
+public class Propietario {
+	private Persona persona;
+	
+	public Propietario (){
+		
+	}
+	
 }
