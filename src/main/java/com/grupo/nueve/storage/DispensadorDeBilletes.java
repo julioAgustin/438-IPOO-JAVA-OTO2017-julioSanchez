@@ -14,13 +14,16 @@ public class DispensadorDeBilletes {
 	}
 	
 	public boolean tiempoVencido(){
+		return false;
 		
 	}
 	public int tiempoRestante(){
+		return tiempoActual;
 		
 		
 	}
 	public boolean billetesRetirados(){
+		return false;
 		
 		
 	}
@@ -31,4 +34,3 @@ public class DispensadorDeBilletes {
 	
 	
 }
-

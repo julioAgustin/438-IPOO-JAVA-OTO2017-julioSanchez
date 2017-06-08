@@ -11,13 +11,16 @@ public class ReceptorDeSobres {
 		
 	}
 	public boolean tiempoVencido(){
+		return false;
 		
 	}
 	public int tiempoRestante(){
+		return tiempoActual;
 		
 	}
 	
 	public boolean sobreCaptura(){
+		return false;
 		
 	}
 
