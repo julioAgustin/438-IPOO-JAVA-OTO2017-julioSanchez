@@ -1,4 +1,6 @@
 package generar;
+
+// Import de tipo de archivo y del Try Catch.
 import java.io.File;
 import java.io.FileNotFoundException;
 
@@ -12,12 +14,12 @@ import org.jespxml.modelo.Atributo;
 import org.jespxml.modelo.Encoding;
 import org.jespxml.modelo.Tag;
 // Clase
-public class generadorxml {
+public class GeneradorXML {
 	// Método para ejecutar la clase.
 	public static void main(String[] args) {
 		
 		// Se añade el Tag Raiz y sus atributos.
-		Tag raiz= new Tag("informe_Personas");
+		Tag raiz= new Tag("Informe_Personas");
 		
 		raiz.addAtributo(new Atributo ("IdInstitucion","1"));
 		raiz.addAtributo(new Atributo ("Fecha_Informe","2017-04-01"));
