@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<informe_Personas Fecha_Informe="2017-04-01" IdInstitucion="1">
+    <Persona Género="M" IdNacionalidad="UY" NombreCompleto="Juan Ramón Scognamiglio Bermúdez" NroDoc="29125364" PrimerApellido="Scognamiglio" PrimerNombre="Juan" SegundoApellido="Bermúdez" SegundoNombre="Ramon">
+        <DatosConyuge IdPaisDoc="UY" IdTipoDoc="2" NombreCompleto="Maria Antonieta Rodriguez Bas" NroDoc="29125364" PrimerApellido="Rodriguez" PrimerNombre="Maria" SegundoApellido="Bas" SegundoNombre="Antonieta"/>
+        <Estudios FechaInformado="2016-01-01" TipoEstudioCursado="Terciario"/>
+        <Documentos FechaVencimiento="2020-01-01" IdPaisDoc="UY" IdTipoDoc="2" NroDoc="43625846" VersionDocumento="Original"/>
+        <Direcciones Barrio="Colon" Ciudad="Montevideo" CodigoPostal="12400" Direccion_Libre="Cap. Tula" Edificio="3" FechaRegistrada="2017-04-18" IdPais="UY" IdTipoDireccion="1" NroApartamento="2" NroPuerta="1957" Telefono="055365073"/>
+        <Trabajos CargoTrabajo="Gerente Proyecto" ComprobanteIngreso="1" EsDependiente="1" FechaInformado="2017-04-18" Salario="1000000"/>
+        <OperacionesActivas CapitalAdeudadoActual="15" CapitalAtrasado="15" CapitalOriginal="1000" DiasAtraso="8" FechaOperacion="2017-04-18" IdMoneda="USD" IdPeriodoPrestamo="1" IdTipoOperacion="1" IdTipoTitular="1" InteresAtrasado="10" InteresOriginal="110" InteresPendienteDeDevengar="5" MoraPaga="10" MoraPendienteDePago="5" NumeroOperacion="1234" PlazoRemanenteEnPeriodos="2" PlazoTotalEnPeriodos="3"/>
+        <OperacionesCanceladas CapitalOriginal="1800000000000000.32" DiasAtrasoMaximo="10" FechaOperacion="2017-04-18" IdTipoCancelacion="3" IdTipoOperacion="1" MontoInteresGenerado="1" MontoMoraGenerada="0" MontoQuitaCapital="1" MontoQuitaInteres="1" MontoQuitaMora="192000"/>
+        <DeclaracionesPatrimoniales Propio_Ganancial="G" Tipo="AO" Valor_Estimado_USD="780000000.32"/>
+    </Persona>
+</informe_Personas>
