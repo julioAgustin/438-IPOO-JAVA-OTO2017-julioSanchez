@@ -1,15 +1,15 @@
 package baseDeDatos;
-	import java.beans.Statement;
+
+	import static org.junit.Assert.assertNotNull;
 	import java.sql.Connection;
 	import java.sql.DriverManager;
 	import java.sql.PreparedStatement;
 	import java.sql.ResultSet;
 	import java.sql.SQLException;
+	import java.sql.Statement;
 	import java.text.SimpleDateFormat;
 	import java.util.Date;
-	
 	import org.junit.Test;
-	
 	
 public class Conexion {
 	
@@ -108,15 +108,10 @@ public class Conexion {
 				 "org.postgresql.Driver"); // Controlador o driver
 		
 		assertNotNull(c);
-		
 		c.abrir();
-
-		
-		
 		assertNotNull(c.getCon());
 
 		// Insert
-		
 		PreparedStatement ps=null;
 		
 		try{
@@ -128,8 +123,7 @@ public class Conexion {
 				"direccion_particular, telefono, nombre) " +
 				"VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
 			);
-			
-			
+				
 			ps.setDate(2, new java.sql.Date(new java.util.Date().getTime()));
 			ps.setString(3, "PY");
 			ps.setString(4, "CI");
@@ -162,7 +156,7 @@ public class Conexion {
 		
 		try{
 			Connection con=c.getCon();
-			psDelete=con.prepareStatement("delete from personas where id=?");
+			psDelete=con.prepareStatement("DELETE FROM personas WHERE id=?");
 			psDelete.setInt(1, 5);
 			
 			// Cantidad de filas afectadas
@@ -188,7 +182,7 @@ public class Conexion {
 		
 		try{
 			Connection con=c.getCon();
-			psUpdate=con.prepareStatement("update personas set nacionalidad=? where id=?");
+			psUpdate=con.prepareStatement("UPDATE personas SET nacionalidad=? WHERE id=?");
 			psUpdate.setInt(1, 6);
 			psUpdate.setString(2, "BR");
 			
@@ -211,14 +205,13 @@ public class Conexion {
 			}
 		}		
 		
-		
 		Statement s=null;
 		ResultSet rs=null;
 		
 		try{
 			Connection con=c.getCon();
 			s=con.createStatement();
-			rs=s.executeQuery("select * from personas");
+			rs=s.executeQuery("SELECT * FROM personas");
 			while(rs.next()){
 				System.out.println("id: " + rs.getString("id"));
 				System.out.println("Nombre: " + rs.getString("nombre"));
