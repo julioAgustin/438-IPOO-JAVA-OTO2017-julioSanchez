@@ -1,13 +1,12 @@
 package programarJavaDeitel; // Paquete del programa
 
 
-// Programa para imprimir una línea de texto con varias instrucciones
-public class Bienvenido2 {
+// Programa para imprimir varias lineas de texto con una sola instrucción.
+public class Bienvenido3 {
 	
     // Método que ejecuta la clase
 	public static void main(String[] args) {
-		System.out.print("¡Bienvenido a ");
-		System.out.println("la programación en Java!");
+		System.out.println("¡Bienvenido\na\nla programación\nen Java!");
 
 	} // Fin del método main
 	
