@@ -152,7 +152,7 @@ public class Conexion {
 			}
 		}
 		
-		PreparedStatement psDelete=null;
+		/*PreparedStatement psDelete=null;
 		
 		try{
 			Connection con=c.getCon();
@@ -238,7 +238,7 @@ public class Conexion {
 				}
 			}
 		}
-	c.cerrar();	
+	c.cerrar();*/	
 		
 	}
 
