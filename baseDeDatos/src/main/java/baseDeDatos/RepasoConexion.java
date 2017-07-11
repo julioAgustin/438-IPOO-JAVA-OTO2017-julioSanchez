@@ -11,7 +11,7 @@ public class RepasoConexion {
 	
 	public static void main(String[] args){
 		
-		// Informacion necesarioa
+		// Informacion necesaria
 		// Usuario
 		String usuario="postgres";
 		// Contraseña
@@ -39,7 +39,7 @@ public class RepasoConexion {
 			// Creamos la sentencia
 			s=con.createStatement();
 			// Ejecutamos
-			rs=s.executeQuery("select * from personas");
+			rs=s.executeQuery("SELECT * FROM personas");
 			// recorremos el resultado
 			while(rs.next()){
 				System.out.print(rs.getString(1) + " ");
@@ -64,8 +64,6 @@ public class RepasoConexion {
 		
 		*/
 		
-		/*
-		
 		// Sentencia parametrizable
 		PreparedStatement ps=null;
 		
@@ -75,10 +73,10 @@ public class RepasoConexion {
 			// Se crea la conexión, pasandole los datos
 			con = DriverManager.getConnection(url, usuario, password);
 			// Creamos la sentencia
-			ps=con.prepareStatement("select * from personas where lugar_de_nacimiento like ? ");
+			ps=con.prepareStatement("SELECT * FROM personas WHERE lugar_de_nacimiento LIKE ? ");
 			// ps.setLong(1, 8);
 			ps.setString(1, "%la Mora%");
-			ps.setString(2, "CI");
+			ps.setString(1, "CI");
 			
 			// Ejecutamos
 			rs=ps.executeQuery();
@@ -103,7 +101,6 @@ public class RepasoConexion {
 				}
 	
 		}
-		
 		
 		
 		/*
