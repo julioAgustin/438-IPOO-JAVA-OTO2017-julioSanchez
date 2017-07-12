@@ -50,6 +50,8 @@ public class Select {
 						System.out.print(rs.getString(9) + " ");
 						System.out.println();
 					}
+					
+					System.out.println("Sentencia ejecutada");
 				} catch (ClassNotFoundException e) {
 					e.printStackTrace();
 				} catch (SQLException e) {

@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Delete {
+public class Create {
 
 	public static void main(String[] args) {
 		
@@ -30,7 +30,7 @@ public class Delete {
 				ResultSet rs=null;
 		
 		// Sentencia parametrizable
-		PreparedStatement psDelete=null;
+		PreparedStatement psCreate=null;
 		
 		try{
 			// Se levanta el .class del driver
@@ -38,16 +38,18 @@ public class Delete {
 			// Se crea la conexión, pasandole los datos
 			con = DriverManager.getConnection(url, usuario, password);
 			// Creamos la sentencia
-			psDelete=con.prepareStatement("DELETE FROM personas WHERE id=? ");
-				psDelete.setInt(1, 1);
-				
-				//Cantidad de filas afectadas
-				int eliminado=psDelete.executeUpdate();
-				
-				if(eliminado > 0){
-					System.out.println("Eliminado.");
-				}
-				
+			psCreate=con.prepareStatement(
+					"CREATE TABLE personas("
+					+"id SERIAL PRIMARY KEY,"
+					+"lugar_de_nacimiento VARCHAR(255), fecha_de_nacimiento DATE, " 
+					+"nacionalidad VARCHAR(5), tipo_doc VARCHAR(5), nro_doc VARCHAR, " 
+					+"direccion_particular VARCHAR(255), telefono VARCHAR, nombre VARCHAR(30)) ");
+			
+			// Ejecutamos
+			psCreate.executeUpdate();
+			
+			System.out.println("Tabla creada.");
+			
 			// recorremos el resultado
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
@@ -56,7 +58,7 @@ public class Delete {
 		}finally{
 			
 				try {
-					if(psDelete!=null) psDelete.close();
+					if(psCreate!=null) psCreate.close();
 					if(con!=null) con.close();
 				} catch (SQLException e) {
 					e.printStackTrace();

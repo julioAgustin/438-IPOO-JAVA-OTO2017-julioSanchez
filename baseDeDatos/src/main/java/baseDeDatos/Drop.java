@@ -30,7 +30,7 @@ public class Drop {
 				ResultSet rs=null;
 		
 		// Sentencia parametrizable
-		PreparedStatement psInsert=null;
+		PreparedStatement psDrop=null;
 		
 		try{
 			// Se levanta el .class del driver
@@ -38,25 +38,13 @@ public class Drop {
 			// Se crea la conexión, pasandole los datos
 			con = DriverManager.getConnection(url, usuario, password);
 			// Creamos la sentencia
-			psInsert=con.prepareStatement(
-					"INSERT INTO personas(" +
-					"lugar_de_nacimiento, fecha_de_nacimiento, " + 
-					"nacionalidad, tipo_doc, nro_doc, " + 
-					"direccion_particular, telefono, nombre) " +
-					"VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
-				);
-				
-				psInsert.setDate(2, new java.sql.Date(new java.util.Date().getTime()));
-				psInsert.setString(3, "PY");
-				psInsert.setString(4, "CI");
-				psInsert.setString(5, "99999999");
-				psInsert.setString(6, "Palma");
-				psInsert.setString(7, "999999");
-				psInsert.setString(8, "Diego Bonnin");
-				psInsert.setString(1, "Asunción");
+			psDrop=con.prepareStatement("DROP TABLE personas");
 			
 			// Ejecutamos
-			psInsert.executeUpdate();
+			psDrop.executeUpdate();
+			
+			System.out.println("Tabla dropeada.");
+			
 			// recorremos el resultado
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
@@ -65,7 +53,7 @@ public class Drop {
 		}finally{
 			
 				try {
-					if(psInsert!=null) psInsert.close();
+					if(psDrop!=null) psDrop.close();
 					if(con!=null) con.close();
 				} catch (SQLException e) {
 					e.printStackTrace();
