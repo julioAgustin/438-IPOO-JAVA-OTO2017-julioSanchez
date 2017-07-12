@@ -39,8 +39,15 @@ public class Select {
 					rs=s.executeQuery("SELECT * FROM personas");
 					// recorremos el resultado
 					while(rs.next()){
+						System.out.print(rs.getString(1) + " ");
 						System.out.print(rs.getString(2) + " ");
-						System.out.print(rs.getString(1));
+						System.out.print(rs.getString(3) + " ");
+						System.out.print(rs.getString(4) + " ");
+						System.out.print(rs.getString(5) + " ");
+						System.out.print(rs.getString(6) + " ");
+						System.out.print(rs.getString(7) + " ");
+						System.out.print(rs.getString(8) + " ");
+						System.out.print(rs.getString(9) + " ");
 						System.out.println();
 					}
 				} catch (ClassNotFoundException e) {

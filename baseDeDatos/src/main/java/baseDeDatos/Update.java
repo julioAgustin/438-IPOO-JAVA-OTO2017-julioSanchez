@@ -39,7 +39,7 @@ public class Update {
 			// Creamos la sentencia
 			psUpdate=con.prepareStatement("UPDATE personas SET nacionalidad=? WHERE id=? ");
 			
-			psUpdate.setString(1, "");
+			psUpdate.setString(1, "PY");
 			psUpdate.setInt	  (2, 7);
 		//Cantidad de filas afectadas
 		int actualizado=psUpdate.executeUpdate();
