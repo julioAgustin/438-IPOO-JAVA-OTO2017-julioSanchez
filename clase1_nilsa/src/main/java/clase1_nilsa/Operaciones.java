@@ -41,6 +41,9 @@ public class Operaciones {
 			case 4:
 				ordenarlistaASC();
 				break;
+			case 5:
+				ordenarlistaDESC();
+				break;
 			case 6:
 				imprimirLista();
 				break;
@@ -120,7 +123,19 @@ public class Operaciones {
 		public int compare (Funcionario o1, Funcionario o2){
 			return new Integer(o2.getAntiguedad().compareTo(o1.getAntiguedad()));
 		}
+	};
+	
+	private void ordenarlistaDESC(){
+		Collections.sort(listaFuncionarios, ORDENDESC);
+	}
+	
+	static final Comparator<Funcionario> ORDENDESC = new Comparator<Funcionario>(){
+		@Override
+		public int compare (Funcionario o1, Funcionario o2){
+			return new Integer(o2.getSalario().compareTo(o1.getSalario()));
+		}
 	};	
+	
 	public static void main(String[] args) {
 		
 
