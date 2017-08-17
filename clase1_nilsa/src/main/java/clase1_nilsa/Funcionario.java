@@ -1,5 +1,7 @@
 package clase1_nilsa;
 
+import java.io.IOException;
+
 public class Funcionario {
 	private String nroCedula;
 	private String nombreCompleto;
@@ -71,8 +73,17 @@ public class Funcionario {
 		this.salario = salario;
 	}
 
-	public static void main(String[] args) {
-		
+	public static void main(String[] args) {	
+		Operaciones operaciones = new Operaciones();
+		try {
+			operaciones.menu();
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
